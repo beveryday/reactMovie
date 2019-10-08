@@ -18,9 +18,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const clip = {
-  title: 'Excellent Owl',
+  title: 'Back to the Future',
   src: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-owl.jpg',
-  height: 200,
+  height: 200,``
   width:200
 };
 
@@ -31,8 +31,8 @@ class Movie extends React.Component {
       <Card className ="parentDiv"> 
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+          <Avatar aria-label="recipe" >
+            <img src="https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-owl.jpg"/>
           </Avatar>
         }
         action={
@@ -40,12 +40,12 @@ class Movie extends React.Component {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={clip.title}
+        subheader="Release Date: July 3, 1985"
       /> 
         <h1>{clip.title}</h1>
         <img alt={clip.title} src={clip.src} width={clip.width} height={clip.height} />
-        <textarea className = "textArea"></textarea>
+        
       </Card>
     );
   }
