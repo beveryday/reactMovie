@@ -19,8 +19,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const clip = {
   title: 'Back to the Future',
-  src: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-owl.jpg',
-  height: 200,``
+  src: '14026976_f520.jpg',
+  height: 200,
   width:200
 };
 
@@ -32,7 +32,7 @@ class Movie extends React.Component {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" >
-            <img src="https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-owl.jpg"/>
+            <img src="14026976_f520.jpg"/>
           </Avatar>
         }
         action={
