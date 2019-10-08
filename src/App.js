@@ -1,20 +1,9 @@
 import React from 'react';
-import { Card, ListItem, Button, Icon } from 'react-native-elements';
+import { Card, ListItem, Button, Icon } from '/Users/austinevery/my-app/node_modules/react-native-elements/src/avatar/Avatar.js';
 
 // import logo from './logo.svg';
 import './App.css';
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </header>
-//     </div>
-//   );
-// }
+
 
 
 const clip = {
