@@ -16,7 +16,21 @@ const clip = {
 class Movie extends React.Component {
   render() {
     return (
-      <Card className ="parentDiv">  
+      <Card className ="parentDiv"> 
+      <CardHeader
+        avatar={
+          <Avatar aria-label="recipe" className={classes.avatar}>
+            R
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        }
+        title="Shrimp and Chorizo Paella"
+        subheader="September 14, 2016"
+      /> 
         <h1>{clip.title}</h1>
         <img alt={clip.title} src={clip.src} width={clip.width} height={clip.height} />
         <textarea className = "textArea"></textarea>
