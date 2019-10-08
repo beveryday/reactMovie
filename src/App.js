@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, ListItem, Button, Icon } from '/Users/austinevery/my-app/node_modules/react-native-elements/src/avatar/Avatar.js';
-
+import Card from '@material-ui/core/Card';
 // import logo from './logo.svg';
 import './App.css';
 
