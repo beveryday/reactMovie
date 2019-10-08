@@ -1,4 +1,7 @@
 import React from 'react';
+import { View, Text, Image } from 'react-native';
+import { Card, ListItem, Button, Icon } from 'react-native-elements';
+
 // import logo from './logo.svg';
 import './App.css';
 // function App() {
@@ -26,11 +29,11 @@ const clip = {
 class Movie extends React.Component {
   render() {
     return (
-      <div className = "parentDiv">  
+      <Card className ="parentDiv">  
         <h1>{clip.title}</h1>
         <img alt={clip.title} src={clip.src} width={clip.width} height={clip.height} />
         <textarea className = "textArea"></textarea>
-      </div>
+      </Card>
     );
   }
 };
