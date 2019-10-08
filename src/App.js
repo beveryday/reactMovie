@@ -2,8 +2,8 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 // import logo from './logo.svg';
 import './App.css';
-import Logo from './14026976_f520.jpg';
 import clsx from 'clsx';
+import Logo from './14026976_f520.jpg';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -20,10 +20,11 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const clip = {
   title: 'Back to the Future',
-  src: '14026976_f520.jpg',
-  height: 200,``
+  src: './img/14026976_f520.jpg',
+  height: 200,
   width:200
 };
+
 
 // Component class starts here:
 class Movie extends React.Component {
@@ -32,8 +33,8 @@ class Movie extends React.Component {
       <Card className ="parentDiv"> 
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" >
-            <img src="14026976_f520.jpg"/>
+          <Avatar aria-label="recipe" src={Logo}>
+              
           </Avatar>
         }
         action={
@@ -45,7 +46,7 @@ class Movie extends React.Component {
         subheader="Release Date: July 3, 1985"
       /> 
         <h1>{clip.title}</h1>
-        <img alt={clip.title} src={clip.src} width={clip.width} height={clip.height} />
+        <img alt={clip.title} src={Logo} width={clip.width} height={clip.height} />
         
       </Card>
     );
