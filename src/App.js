@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 // import logo from './logo.svg';
 import './App.css';
+import Logo from './14026976_f520.jpg';
 import clsx from 'clsx';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -20,7 +21,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const clip = {
   title: 'Back to the Future',
   src: '14026976_f520.jpg',
-  height: 200,
+  height: 200,``
   width:200
 };
 
