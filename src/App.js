@@ -15,7 +15,7 @@ import './App.css';
 // }
 
 
-const owl = {
+const clip = {
   title: 'Excellent Owl',
   src: 'https://s3.amazonaws.com/codecademy-content/courses/React/react_photo-owl.jpg',
   height: 200,
@@ -23,16 +23,16 @@ const owl = {
 };
 
 // Component class starts here:
-class Owl extends React.Component {
+class Movie extends React.Component {
   render() {
     return (
       <div className = "parentDiv">  
-        <h1>{owl.title}</h1>
-        <img alt={owl.title} src={owl.src} width={owl.width} height={owl.height} />
+        <h1>{clip.title}</h1>
+        <img alt={clip.title} src={clip.src} width={clip.width} height={clip.height} />
         <textarea className = "textArea"></textarea>
       </div>
     );
   }
 };
 
-export default Owl;
+export default Movie;
