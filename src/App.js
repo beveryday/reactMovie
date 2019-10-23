@@ -3,8 +3,6 @@ import Card from '@material-ui/core/Card';
 // import logo from './logo.svg';
 import './App.css';
 import clsx from 'clsx';
-
-import Rating from '@material-ui/lab/Rating';
 import Logo from './14026976_f520.jpg';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
