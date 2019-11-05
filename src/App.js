@@ -55,7 +55,6 @@ export default function Movie() {
         subheader="Release Date: July 3, 1985"
       /> 
         <h1>{clip.title}</h1>
-        <img alt={clip.title} src={Logo} width={clip.width} height={clip.height} />
        <Star />
       <form className={classes.container} noValidate autoComplete="off">
       <div>
