@@ -5,6 +5,7 @@ import "./App.css";
 import "./back.jpg";
 import "./austin.png";
 import Star from "./star.js";
+import AppBar from "./components/AppBar.js";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -24,7 +25,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 345
+    maxWidth: "100%"
   },
   media: {
     height: 0,
@@ -54,8 +55,8 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 const avatar = {
-  src: require("austin.png"),
-}
+  src: require("./austin.png")
+};
 const clip = {
   title: "Back to the Future",
   src: require("./back.jpg"),
@@ -81,12 +82,16 @@ export default function Movie() {
   };
 
   return (
+    <>
+    <AppBar/>
     <Card className={classes.card}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar} src={clip.src}>
-            
-          </Avatar>
+          <Avatar
+            aria-label="recipe"
+            className={classes.avatar}
+            src={avatar.src}
+          ></Avatar>
         }
         action={
           <IconButton aria-label="settings">
@@ -121,35 +126,33 @@ export default function Movie() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
           <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-            set aside for 10 minutes.
+            Back to the Future is a 1985 American science fiction film directed
+            by Robert Zemeckis and written by Zemeckis and Bob Gale. It stars
+            Michael J. Fox as teenager Marty McFly, who accidentally travels
+            back in time from 1985 to 1955, where he meets his future parents
+            and becomes his mother's romantic interest. Christopher Lloyd
+            portrays the eccentric scientist Dr. Emmett "Doc" Brown, inventor of
+            the time-traveling DeLorean, who helps Marty repair history and
+            return to 1985. The cast also includes Lea Thompson as Marty's
+            mother Lorraine, Crispin Glover as his father George, and Thomas F.
+            Wilson as Biff Tannen, Marty and George's arch-nemesis.
           </Typography>
           <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet
-            over medium-high heat. Add chicken, shrimp and chorizo, and cook,
-            stirring occasionally until lightly browned, 6 to 8 minutes.
-            Transfer shrimp to a large plate and set aside, leaving chicken and
-            chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes,
-            onion, salt and pepper, and cook, stirring often until thickened and
-            fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2
-            cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is
-            absorbed, 15 to 18 minutes. Reduce heat to medium-low, add reserved
-            shrimp and mussels, tucking them down into the rice, and cook again
-            without stirring, until mussels have opened and rice is just tender,
-            5 to 7 minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then
-            serve.
+            Zemeckis and Gale wrote the script after Gale wondered whether he
+            would have befriended his father if they had attended school
+            together. Film studios rejected it until the financial success of
+            Zemeckis' Romancing the Stone. Zemeckis approached Steven Spielberg,
+            who agreed to produce the project at Amblin Entertainment, with
+            Universal Pictures as distributor. Fox was the first choice to play
+            Marty, but he was busy filming his television series Family Ties,
+            and Eric Stoltz was cast; after the filmmakers decided he was wrong
+            for the role, a deal was struck to allow Fox to film Back to the
+            Future without interrupting his television schedule.
           </Typography>
         </CardContent>
       </Collapse>
     </Card>
+    </>
   );
 }
