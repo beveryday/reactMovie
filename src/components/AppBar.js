@@ -14,6 +14,12 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import Avatar from "@material-ui/core/Avatar";
+import "../austin.png";
+
+const avatar = {
+    src: require("../austin.png")
+  };  
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -163,16 +169,14 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
+          <Avatar
+            aria-label="recipe"
+            className={classes.avatar}
+            src={avatar.src}
+          ></Avatar>
+            
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Movie Boss
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

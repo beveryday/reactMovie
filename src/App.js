@@ -1,27 +1,20 @@
 import React from "react";
-import Container from "@material-ui/core/Container";
 // import logo from './logo.svg';
 import "./App.css";
-import "./back.jpg";
-import "./austin.png";
-import Star from "./star.js";
+import MovieDetails from "./components/MovieDetails.js";
 import AppBar from "./components/AppBar.js";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -54,24 +47,7 @@ const useStyles = makeStyles(theme => ({
     width: 200
   }
 }));
-const avatar = {
-  src: require("./austin.png")
-};
-const clip = {
-  title: "Back to the Future",
-  src: require("./back.jpg"),
-  releaseDate: "Release Date: July 3, 1985",
-  description:
-    "Marty McFly and Gang travel to the past and go back to the future.",
-  width: 100,
-  height: 100
-};
-const width = {
-  width: "70%"
-};
-const headerone = {
-  fontFamily: "monospace"
-};
+
 
 export default function Movie() {
   const classes = useStyles();
@@ -85,27 +61,7 @@ export default function Movie() {
     <>
     <AppBar/>
     <Card className={classes.card}>
-      <CardHeader
-        avatar={
-          <Avatar
-            aria-label="recipe"
-            className={classes.avatar}
-            src={avatar.src}
-          ></Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={clip.title}
-        subheader={clip.releaseDate}
-      />
-
-      <div className="parentDiv" style={classes}>
-        <img style={width} src={clip.src} alt={clip.description} />
-        <Star />
-      </div>
+      <MovieDetails/>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
