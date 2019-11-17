@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import IconButton from "@material-ui/core/IconButton";
 import StarIcon from "@material-ui/icons/Star";
-import { flexbox } from "@material-ui/system";
 
 
 function Star({ isSelected, handleChange, label, starId }) {
