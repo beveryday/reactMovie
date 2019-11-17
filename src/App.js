@@ -1,8 +1,8 @@
 import React from "react";
 // import logo from './logo.svg';
 import "./App.css";
-import MovieDetails from "./components/MovieDetails.js";
-import AppBar from "./components/AppBar.js";
+import MovieDetails from "./components/MovieDetails";
+import AppBar from "./components/AppBar";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
@@ -15,6 +15,7 @@ import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import StarContainer from "./containers/starContainer";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -49,6 +50,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
+
 export default function Movie() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -62,6 +64,7 @@ export default function Movie() {
     <AppBar/>
     <Card className={classes.card}>
       <MovieDetails/>
+      <StarContainer/>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
