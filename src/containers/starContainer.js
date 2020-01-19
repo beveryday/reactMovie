@@ -18,11 +18,6 @@ function StarContainer({ propName }) {
 
   const _handleChange = starId => {
     updateRating(prevRating => {
-      for(var i = 0; i < starId; i++){
-        starArray[i].isSelected = true;
-        console.log(starArray[i]);
-    }
-
       return prevRating.map(pr => {
         if (pr.id === starId) {
           return { ...pr, isSelected: !pr.isSelected};
@@ -31,7 +26,6 @@ function StarContainer({ propName }) {
       });
     });
   };
-
   const passTest = rating.filter(function(pass) {
     return  pass.isSelected == true;
   });
