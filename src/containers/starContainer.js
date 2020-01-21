@@ -14,6 +14,13 @@ function StarContainer({ propName }) {
     display: "flex",
     textAlign: "center",
   }
+  const centerStar = {
+    display: "block",
+    margin: "0 auto",
+    textAlign: "center",
+    minWidth: "14em",
+    maxWidth: "16em"
+  }
   const [rating, updateRating] = useState(starArray);
 
   const _handleChange = starId => {
@@ -26,12 +33,13 @@ function StarContainer({ propName }) {
       });
     });
   };
-  const passTest = rating.filter(function(pass) {
-    return  pass.isSelected == true;
-  });
+  // const passTest = rating.filter(function(pass) {
+  //   return  pass.isSelected === true;
+  // });
 
 
   return (
+  <div className="centerStar" style={centerStar}>
     <div className="starContainer" style={starContain}>
       {rating.map(x => (
         <Star
@@ -42,6 +50,7 @@ function StarContainer({ propName }) {
           handleChange={_handleChange}
         />
       ))}
+    </div>
     </div>
   );
 }

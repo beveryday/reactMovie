@@ -4,7 +4,6 @@ import CardHeader from "@material-ui/core/CardHeader";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import IconButton from "@material-ui/core/IconButton";
 import { makeStyles } from "@material-ui/core/styles";
-import Star from "../star.js"
 import "../back.jpg";
 import "../austin.png";
 
@@ -48,7 +47,6 @@ const clip = {
       />
             <div className="parentDiv" style={classes}>
             <img style={width} src={clip.src} alt={clip.description} />
-            <Star />
             </div>
         </>
       )

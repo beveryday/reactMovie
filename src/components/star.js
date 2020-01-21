@@ -7,7 +7,7 @@ import StarIcon from "@material-ui/icons/Star";
 
 function Star({ isSelected, handleChange, label, starId }) {
   const colorChange = () => {
-    if (isSelected == true){
+    if (isSelected === true){
       return "secondary"
     }
     return "primary"
