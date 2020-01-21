@@ -58,6 +58,6 @@ export default StarContainer;
 //rfcp
 //once selected.
 //const isSelectedStarId = starId that isSelected = true;
-//const highlightedGroup = any starId <= isSelectedStarId;
+//const highlightedGroup = any starId <= isSelectedStarId asdalsdlkmlsd;
 
 
