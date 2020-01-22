@@ -35,7 +35,7 @@ function StarContainer({ propName }) {
   return (
   <div className="centerStar" style={centerStar}>
     <div className="starContainer" style={starContain}>
-      {rating.map((x, index) => (
+      {starArray.map((x, index) => (
         <Star
           label={x.label}
           starId={index}
