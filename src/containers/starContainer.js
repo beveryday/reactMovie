@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Star from "../components/star";
-const starArray = [
+export const starArray = [
   { label: "bad", id: 1, isSelected: false},
   { label: "good", id: 2, isSelected: false },
   { label: "ok", id: 3, isSelected: false },
@@ -27,12 +27,14 @@ function StarContainer({ propName }) {
     updateRating(prevRating => {
       return prevRating.map(pr => {
         if (pr.id === starId) {
+          console.log(pr.id);
           return { ...pr, isSelected: !pr.isSelected};
         }
         return pr;
       });
     });
   };
+  
   // const passTest = rating.filter(function(pass) {
   //   return  pass.isSelected === true;
   // });
@@ -64,6 +66,8 @@ StarContainer.defaultProps = {
 };
 
 export default StarContainer;
+
+
 //rfcp
 //once selected.
 //const isSelectedStarId = starId that isSelected = true;
