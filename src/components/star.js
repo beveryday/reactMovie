@@ -12,7 +12,8 @@ const starArray = [
   { label: "excellent", id: 5, isSelected: false }
 ];
 
-function Star({ isSelected, handleChange, label, starId, starArray}) {
+function Star({ isSelected, handleChange, label, starId}) {
+  const colorChange = () => {
     for(var i = 0; i < starArray.length; i++){
         if(starArray[i].isSelected === true){
             var selectedStar = starArray[i].id;
