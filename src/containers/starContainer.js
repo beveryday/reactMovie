@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Star from "../components/star";
 export const starArray = [
-  { label: "bad", id: 1, isSelected: false},
-  { label: "good", id: 2, isSelected: false },
-  { label: "ok", id: 3, isSelected: false },
-  { label: "great", id: 4, isSelected: false },
-  { label: "excellent", id: 5, isSelected: false }
+  { label: "bad" },
+  { label: "good" },
+  { label: "ok" },
+  { label: "great" },
+  { label: "excellent" }
 ];
 
 function StarContainer({ propName }) {
@@ -21,18 +21,10 @@ function StarContainer({ propName }) {
     minWidth: "14em",
     maxWidth: "16em"
   }
-  const [rating, updateRating] = useState(starArray);
+  const [rating, updateRating] = useState(0);
 
   const _handleChange = starId => {
-    updateRating(prevRating => {
-      return prevRating.map(pr => {
-        if (pr.id === starId) {
-          console.log(pr.id);
-          return { ...pr, isSelected: !pr.isSelected};
-        }
-        return pr;
-      });
-    });
+    updateRating(starId)
   };
   
   // const passTest = rating.filter(function(pass) {
@@ -43,12 +35,12 @@ function StarContainer({ propName }) {
   return (
   <div className="centerStar" style={centerStar}>
     <div className="starContainer" style={starContain}>
-      {rating.map(x => (
+      {rating.map((x, index) => (
         <Star
           label={x.label}
-          starId={x.id}
-          key={x.id}
-          isSelected={x.isSelected}
+          starId={index}
+          key={index}
+          isSelected={index <= rating}
           handleChange={_handleChange}
         />
       ))}
